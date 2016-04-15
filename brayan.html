@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<script>
+	window.onload=function(){
+		var elemento=document.getElementById('micanvas');
+		console.log(elemento);
+		//comprobacion sobre siencomyramos un elemento
+		//y podems extraer su contexto con getcontext(),que eundiicacompatibilidad con canvas
+		if(elemento && elemento.getContext){
+			//acedo al  contexto de la seugunda de este canvas .necsario para dibujar
+			var contexto=elemento.getContext('2d');
+			if(contexto){
+				//sitengo el contexto 2desque todo ha ido bieny puedo empezaer a dibujar en alee canvas 
+				contexto.fillRect(0,0,550,100);
+				//cambio el  coloar de estilo
+				contexto.fillStyle='#cc0000';
+				//dibujo atro rectanguloa 
+				contexto.fillRect(10,10,100,70);
+
+			}
+
+		}
+	}
+</script>
+</head>
+<body>
+<!--etiqueta canvas--> 
+<canvas id="micanvas" width="200"heigth="100" >
+	este texto se muestra para los navegadores no coompatiblis con canvas
+</canvas>
+
+<center>centra el texto</center>
+<cite draggable= "true">esto es una cita </cite>
+
+<code>
+<pre>
+	
+</pre>
+</code>
+<table border="3">
+<caption>
+titulo
+<!--define el te¿xtao de u na tabla-->
+</caption>
+</table>
+
+
+</body>
+</html>
